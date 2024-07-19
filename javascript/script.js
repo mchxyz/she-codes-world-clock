@@ -1,29 +1,53 @@
 function updateTime() {
 
-// Los Angeles 
+// New York
 
-let losAngelesElement = document.querySelector("#los-angeles");
-if (losAngelesElement) {
-let losAngelesDateElement = losAngelesElement.querySelector(".date");
-let losAngelesTimeElement = losAngelesElement.querySelector(".time");
-let losAngelesTime = moment().tz("America/Los_Angeles");
+let newYorkElement = document.querySelector("#new-york");
+if (newYorkElement) {
+let newYorkDateElement = newYorkElement.querySelector(".date");
+let newYorkTimeElement = newYorkElement.querySelector(".time");
+let newYorkTime = moment().tz("America/New_York");
 
-losAngelesDateElement.innerHTML = losAngelesTime.format("MMMM Do YYYY");
-losAngelesTimeElement.innerHTML = losAngelesTime.format("h:mm:ss [<small>]A[</small>]");
+newYorkDateElement.innerHTML = newYorkTime.format("MMMM Do YYYY");
+newYorkTimeElement.innerHTML = newYorkTime.format("h:mm:ss [<small>]A[</small>]");
 }
 
+// Sydney
+
+let sydneyElement = document.querySelector("#sydney");
+if (sydneyElement) {
+let sydneyDateElement = sydneyElement.querySelector(".date");
+let sydneyTimeElement = sydneyElement.querySelector(".time");
+let sydneyTime = moment().tz("Australia/Sydney");
+
+sydneyDateElement.innerHTML = sydneyTime.format("MMMM Do YYYY");
+sydneyTimeElement.innerHTML = sydneyTime.format("h:mm:ss [<small>]A[</small>]");
+}
+
+// Madrid 
+
+let madridElement = document.querySelector("#madrid");
+if (madridElement) {
+let madridDateElement = madridElement.querySelector(".date");
+let madridTimeElement = madridElement.querySelector(".time");
+let madridTime = moment().tz("Europe/Madrid");
+
+madridDateElement.innerHTML = madridTime.format("MMMM Do YYYY");
+madridTimeElement.innerHTML = madridTime.format("h:mm:ss [<small>]A[</small>]");
+}
+}
 // Paris
 
-let parisElement = document.querySelector("#paris");
-if (parisElement) {
-let parisDateElement = parisElement.querySelector(".date");
-let parisTimeElement = parisElement.querySelector(".time");
-let parisTime = moment().tz("Europe/Paris");
+// let parisElement = document.querySelector("#paris");
+// if (parisElement) {
+// let parisDateElement = parisElement.querySelector(".date");
+// let parisTimeElement = parisElement.querySelector(".time");
+// let parisTime = moment().tz("Europe/Paris");
 
-parisDateElement.innerHTML = parisTime.format("MMMM Do YYYY");
-parisTimeElement.innerHTML = parisTime.format("h:mm:ss [<small>]A[</small>]");
-}
-}
+// parisDateElement.innerHTML = parisTime.format("MMMM Do YYYY");
+// parisTimeElement.innerHTML = parisTime.format("h:mm:ss [<small>]A[</small>]");
+// }
+// }
 
 function updateCity(event) {
     let cityTimeZone = event.target.value;
@@ -41,6 +65,9 @@ function updateCity(event) {
       </div>
         <div class="time">${cityTime.format("h:mm:ss")} <small>${cityTime.format("A")}</small></div>
       </div>
+              <div class="homepage">
+        <a href="index.html">Back to homepage</ a>
+        </div>
     `;
 }
 

@@ -50,6 +50,9 @@ select {
 .time {
     font-size: 48px;
     font-weight: bold;
+    /* filter: blur(4px);
+    transform: rotate(90deg);
+    transform: scaleX(-1); */
 }
 
 .time small {
@@ -64,3 +67,6 @@ footer {
     color: rgba(0, 0, 0, 0.8);
 } 
 
+.homepage {
+margin: 0 0 50px 0;
+      }
